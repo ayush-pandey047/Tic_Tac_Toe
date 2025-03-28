@@ -1,7 +1,10 @@
-import React, { useRef, useState } from "react"
+import React, { useRef,  useEffect, useState } from "react"
 import "./TicTacToe.css"
-import circle_icon from "../Assets/circle.png"
-import cross_icon from "../Assets/cross.png"
+import circle_icon from "../Assets/doremon1.png"
+import cross_icon from "../Assets/nobita1.png"
+import nobita from "../Assets/wonnobita.png"
+import Doremon from "../Assets/wondoremon.png"
+import doremonTheme from "../Assets/opening-doraemon-instrumental-(karaoke)-made-with-Voicemod.mp3";
 
 let data = ["","","","","","","","",""]
 
@@ -10,7 +13,17 @@ const TicTacToe =  () =>{
     let [count,setCount] = useState(0);
     let [lock,setLock] = useState(false);
     let titleRef = useRef(null);
+    const [audioStarted, setAudioStarted] = useState(false);
 
+    const themeAudio = useRef(new Audio(doremonTheme));
+
+    const startGame = () => {
+        if (!audioStarted) {
+          themeAudio.current.loop = true;
+          themeAudio.current.play().catch((err) => console.log("Audio blocked", err));
+          setAudioStarted(true);
+        }
+      };
     
     let box1 = useRef(null);
     let box2 = useRef(null);
@@ -65,27 +78,32 @@ const TicTacToe =  () =>{
      }
      const won = (winner) =>{
         setLock(true);
+        themeAudio.current.pause();
         if (winner === "x")
         {
-            titleRef.current.innerHTML = `Congratulation: <img src=${cross_icon}> Wins`;
+            titleRef.current.innerHTML = `Congratulation: <img src=${nobita }> Wins あなたが勝ちます`;
         } else{
-            titleRef.current.innerHTML = `Congratulation: <img src=${circle_icon}>`;
+            titleRef.current.innerHTML = `Congratulation:<img src=${Doremon}> Wins あなたが勝ちます`;
         }
      }
 
      const reset = () => {
         setLock(false);
         data = ["","","","","","","","",""];
-        titleRef.current.innerHTML = `Tic Tac Toe In <span>React</span>`;
+        titleRef.current.innerHTML = `Doraemon Tic Tac Toe In <span>React</span>`;
         box_array.map((e) => {
             e.current.innerHTML = ""
+        
+        themeAudio.current.play().catch((err) => console.log("Audio blocked", err));
         })
      }
 
 
     return(
     <div className="container">
+        {/* <button className="start-btn" onClick={startGame}>Start Game</button> */}
         <h1 className="title" ref={titleRef}>Tic Tac Toe Game In<span>React</span></h1>
+
         <div className="board">
             <div className="row1">
                 <div className="boxes" ref={box1} onClick={(e) => {toggle(e,0)}}></div>
