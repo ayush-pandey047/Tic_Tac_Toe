@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/tic_tac_toe/static/css/main.dd24a94c.css",
+    "main.js": "/tic_tac_toe/static/js/main.b5002fbe.js",
+    "static/js/453.e036e8b5.chunk.js": "/tic_tac_toe/static/js/453.e036e8b5.chunk.js",
+    "static/media/opening-doraemon-instrumental-(karaoke)-made-with-Voicemod.mp3": "/tic_tac_toe/static/media/opening-doraemon-instrumental-(karaoke)-made-with-Voicemod.18d9de4434d284046cb9.mp3",
+    "static/media/wondoremon.png": "/tic_tac_toe/static/media/wondoremon.8b76622fe065ba986793.png",
+    "static/media/doremontheme.png": "/tic_tac_toe/static/media/doremontheme.9a9c48704ac265959cc5.png",
+    "static/media/doremon1.png": "/tic_tac_toe/static/media/doremon1.0c14216fd7e9ca5b3931.png",
+    "static/media/wonnobita.png": "/tic_tac_toe/static/media/wonnobita.8c9a7d6128b349c6aad3.png",
+    "static/media/nobita1.png": "/tic_tac_toe/static/media/nobita1.1eb48b7a762c34200388.png",
+    "index.html": "/tic_tac_toe/index.html",
+    "main.dd24a94c.css.map": "/tic_tac_toe/static/css/main.dd24a94c.css.map",
+    "main.b5002fbe.js.map": "/tic_tac_toe/static/js/main.b5002fbe.js.map",
+    "453.e036e8b5.chunk.js.map": "/tic_tac_toe/static/js/453.e036e8b5.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.dd24a94c.css",
+    "static/js/main.b5002fbe.js"
+  ]
+}
